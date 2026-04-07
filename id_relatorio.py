@@ -5,7 +5,7 @@ import re
 
 # --- 1. Configuração de Caminho ---
 NOME_ARQUIVO_MAPA = "df_id_vstr.xlsx"
-PASTA = Path("arquivos_fixos")
+PASTA = Path(r"\\Bp-1hd57t3-inea\e\COGET\INPUTS_SCRIPTS")
 CAMINHO_COMPLETO_MAPA = PASTA / NOME_ARQUIVO_MAPA
 COLUNA_UNIQUE = 'uniquerowid'
 COLUNA_ID = 'id_vstr'
