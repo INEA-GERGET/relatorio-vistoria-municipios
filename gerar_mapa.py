@@ -6,6 +6,7 @@ import os
 import string
 import math
 from shapely.geometry import Point
+# Importação de ScaleBar corrigida e usada de forma funcional
 from matplotlib_map_utils.core.scale_bar import ScaleBar, scale_bar 
 from matplotlib.offsetbox import AnnotationBbox, OffsetImage
 import matplotlib.image as mpimg
@@ -16,7 +17,8 @@ pd.set_option('display.max_rows', None)
 
 # --- Configurações de Caminho ---
 mapa_folder = r"output\mapa"
-os.makedirs(mapa_folder, exist_ok=True)
+if not os.path.exists(mapa_folder):
+    os.makedirs(mapa_folder, exist_ok=True)
 caminho_seta_norte_png = r"arquivos_fixos\imagens_layout\norte.png" 
 COR_DESTAQUE = '#adcb56'
 CODIGO_ESTADO_RJ = 33
