@@ -14,7 +14,7 @@ from mimetypes import guess_type
 ARQUIVO_ENVIO = r"\\Bp-1hd57t3-inea\e\COGET\INPUTS_SCRIPTS\acessos.xlsx"
 SENDER_EMAIL = "geget.inea@gmail.com" 
 df_envio = pd.read_excel(ARQUIVO_ENVIO)
-df_envio = df_envio[df_envio['email'] == SENDER_EMAIL]
+df_envio = df_envio[df_envio['filtro'] == SENDER_EMAIL]
 SENDER_PASSWORD = str(df_envio['senha'].iloc[0])
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
