@@ -10,17 +10,16 @@ from mimetypes import guess_type
 
 
 # --- CONFIGURAÇÕES ---
-# Senha está na pasta do COGET, tendo acesso, deverá compilar normalmente na sua máquina local :)
 
-ARQUIVO_ENVIO = r"\\Bp-1hd57t3-inea\e\COGET\INPUTS_SCRIPTS\enviar_email.xlsx"
+ARQUIVO_ENVIO = r"\\Bp-1hd57t3-inea\e\COGET\INPUTS_SCRIPTS\acessos.xlsx"
 SENDER_EMAIL = "geget.inea@gmail.com" 
 df_envio = pd.read_excel(ARQUIVO_ENVIO)
 df_envio = df_envio[df_envio['email'] == SENDER_EMAIL]
 SENDER_PASSWORD = str(df_envio['senha'].iloc[0])
-print(SENDER_PASSWORD)
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 CC_EMAIL = "olhonoverde@gmail.com" 
+
 
 ARQUIVO_ASSINATURA = r'input\CSVs\assinaturas.xlsx'
 ARQUIVO_CAMADA = r'input\CSVs\camada.xlsx'
