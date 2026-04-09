@@ -196,7 +196,7 @@ if __name__ == "__main__":
     print("\n" + "="*110)
     print("="*20 + " "*22 + " 📃 GERAÇÃO DE VISTORIAS 📃 " + " "*21 + "="*20)
     print("="*110)
-    print("Esteja conectado à internet e ao COGET!"
+    print("Esteja conectado à internet e ao COGET!")
     print("="*110)          
     
     lista_para_envio = []
