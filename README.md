@@ -11,7 +11,7 @@
 Este repositório contém todos os arquivos necessárrios para gerar Relatórios Laudo do Alerta e Laudo de Emabrgo de forma automática.
 
 ## Uso
-Esse script possui uma interface interativa no terminal, onde o usuário pode escolher qual tipo de laudo quer gerar, se vai gerar ou não a tabela de merge e selecionar os IDs dos alertas a serem processados.
+Esse script possui uma interface interativa no terminal, onde o usuário pode escolher se vai gerar ou não os relatórios de vistoria.
 O primeiro passo ao executar o [main.py](main.py) deverá ser essa tela:
 ```
 ==============================================================================================================
@@ -32,23 +32,23 @@ Independente da sua decisão sobre a geração dos relatórios de vistoria, a pr
 
 Deseja iniciar o envio dos e-mails agora? (s/n):
 ```
+
 ### Sobre os arquivos 
 Baixe todos os arquivos e pastas e salve em um único diretório. 
 
+Ao rodar o `main.py` surgirá uma pasta de inputs e uma de outputs. Os relatórios finais estarão em `output/relatorios`.
+
 Sobre os arquivos:
-1. **input**: Nesta pasta todos os arquivos iniciais do programa estarão aqui e serão baixados automaticamente. Nela deverão conter os seguintes arquivos:
-   1. **assinaturas**: arquivos de fotos das assianturas dos fiscais.
-   2. **autorizacao**: arquivos de anexo dos laudos.
-   3. **CSVs**: Esta pasta deverá armazenar todas as tabelas provenientes do formulário. 
-   4. **Pontos**: Aqui estarão mapas do local marcado no GPS.
-   5. **RL**: Nesta pasta vão estár o relatório fotográfico a ser inserido no relatório.
-2. **output**: Nesta pasta estarão os resultados do script: os relatórios de vistoria e os mapas.
-3. **arquivos_fixos**: Nesta pasta estão os arquivos de imagem necessários para o layout do documento, tais como: papel timbrado, logos, cabeçalho, rodapé e referências.
-   1. **df_id_vstr.xlsx**: Arquivo excel com o ID de Laudo de Vistoria.
-4. **config**: Nesta pasta está o acesso para o Portal GEOINEA.
-5. **logs**: Pasta com o aquivo de execução.
-    
-* [**main.py**](main.py): É o script principal, baixa os dados, gera os relatórios de vistoria e envia-os por email. 
+
+1. **arquivos_fixos**: Nesta pasta estão os arquivos de imagem necessários para o layout do documento, tais como: papel timbrado, logos, cabeçalho, rodapé e referências.
+   1.1. **df_id_vstr.xlsx**: Arquivo excel com o ID de Laudo de Vistoria.
+2. **config**: Nesta pasta está o acesso para o Portal GEOINEA.
+3. [**main.py**](main.py): É o script principal, baixa os dados, gera os relatórios de vistoria e envia-os por email. 
+4. [**enviar_email.py**](enviar_email.py): É o código que envia os emails com o relatório anexado para os vistoriadores.
+5. [**funcoes_script.py**](funcoes_script.py): É o códico com funções internas essenciais para o funcionamento do relatório, como baixar os inputs.  
+4. [**id_relatorio.py**](id_relatorio.py): É o código que cria um ID único para cada relatório. O output dele fica armazenado no em `INPUT-SCRIPTS` no GOGET. 
+5. [**layout_vistoria.py**](layout_vistoria.py): É o código responsável pela criação do relatório. 
+
 
 ## Instalação
 
