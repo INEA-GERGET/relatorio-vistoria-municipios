@@ -17,7 +17,7 @@ O primeiro passo ao executar o [main.py](main.py) deverá ser essa tela:
 ==============================================================================================================
 ====================                       📃 GERÇÃO DE VISTORIAS 📃                      ====================
 ==============================================================================================================
-Esteja conectado à internet e com a tabela 'df_id_vstr.xlsx' atualizada na pasta 'arquivos_fixos'!
+Esteja conectado à internet e ao COGET!
 ==============================================================================================================
 
 Deseja baixar os dados e gerar os relatórios agora? (s/n): 
